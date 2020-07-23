@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-function Dashboard(props) {
+function Dashboard() {
   return (
     <div>
       <h1>Dashboard</h1>

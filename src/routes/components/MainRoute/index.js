@@ -5,7 +5,7 @@ import { Redirect, Route } from 'react-router-dom';
 const RenderedRoute = (Component, child) => (props) => {
   // const state = store.getState();
   const token = localStorage.getItem('token');
-  const { isLogin } = /*state.login;*/ {isLogin: true}
+  const { isLogin } = /*state.login;*/ { isLogin: true }
   // eslint-disable-next-line react/prop-types
   const { location } = props;
   const { pathname } = location;

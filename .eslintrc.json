@@ -22,6 +22,7 @@
         "block-spacing": 2,
         "no-delete-var": 1,
         "no-undef": 1,
-        "no-unused-vars": 1
+        "no-unused-vars": 1,
+        "semi": [1, "never"]
     }
 }

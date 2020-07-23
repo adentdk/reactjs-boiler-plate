@@ -1,18 +1,11 @@
-import React, {PureComponent} from 'react';
-import PropTypes from 'prop-types';
-import { MappedRoute } from '../../routes/components';
+import React, {PureComponent} from 'react'
+import PropTypes from 'prop-types'
+import { MappedRoute } from '../../routes/components'
 
 
 export default class Clean extends PureComponent {
-  static propTypes = {
-    child: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.arrayOf(Object)
-    ])
-  }
-
   render () {
-    const {child} = this.props;
+    const {child} = this.props
 
     return (
       <div>
@@ -22,4 +15,11 @@ export default class Clean extends PureComponent {
       </div>
     )
   }
+}
+
+Clean.propTypes = {
+  child: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(Object)
+  ])
 }

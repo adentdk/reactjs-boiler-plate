@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 function Loading() {
   return (
@@ -8,4 +8,4 @@ function Loading() {
   )
 }
 
-export default Loading;
+export default Loading

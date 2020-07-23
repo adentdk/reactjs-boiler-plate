@@ -1,11 +1,11 @@
-import {lazy} from 'react';
+import {lazy} from 'react'
 
-import {Lazyload} from './../HOC';
+import {Lazyload} from './../HOC'
 
-import {Clean as CleanLayout} from './../layouts';
+import {Clean as CleanLayout} from './../layouts'
 
-const Login = lazy(() => import('./../pages/Login'));
-const Dashboard = lazy(() => import('./../pages/Dashboard'));
+const Login = lazy(() => import('./../pages/Login'))
+const Dashboard = lazy(() => import('./../pages/Dashboard'))
 
 export const routes = [
   {

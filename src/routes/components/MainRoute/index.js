@@ -5,20 +5,20 @@ import { Redirect, Route } from 'react-router-dom';
 const RenderedRoute = (Component, child) => (props) => {
   // const state = store.getState();
   const token = localStorage.getItem('token');
-  const { isLogin } = /*state.auth;*/ {isLogin: true}
+  const { isLogin } = /*state.login;*/ {isLogin: true}
   // eslint-disable-next-line react/prop-types
   const { location } = props;
   const { pathname } = location;
   if (pathname === '/') {
     if (isLogin && token !== null) {
       return (<Redirect to="/dashboard" />);
-    } return (<Redirect to="/auth" />);
+    } return (<Redirect to="/login" />);
   }
-  if (token === null && !isLogin && pathname !== '/auth') {
-    return (<Redirect to="/auth" />);
+  if (token === null && !isLogin && pathname !== '/login') {
+    return (<Redirect to="/login" />);
   } else if (token !== null && isLogin && pathname !== '/dashboard' && child.length <= 0) {
     return (<Component {...props} child={child} />);
-  } else if (token !== null && pathname === '/auth') {
+  } else if (token !== null && pathname === '/login') {
     return (<Redirect to="/dashboard" />);
   }
   return (<Component {...props} child={child} />);
